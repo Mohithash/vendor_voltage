@@ -96,14 +96,8 @@ VOLTAGE_PLATFORM_RELEASE_OR_CODENAME := 17.0
 
 # Voltageos System Version
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.voltage.version=$(VOLTAGE_DISPLAY_VERSION) \
-  ro.voltage.build.status=$(VOLTAGE_BUILD_TYPE) \
-  ro.voltageversion=$(VOLTAGE_MOD_VERSION) \
-  ro.voltage.build.date=$(VOLTAGE_BUILD_DATE) \
-  ro.voltage.buildtype=$(VOLTAGE_BUILD_TYPE) \
-  ro.voltage.fingerprint=$(VOLTAGE_FINGERPRINT) \
-  ro.voltage.device=$(VOLTAGE_BUILD) \
-  ro.voltage.platform_release_or_codename=$(VOLTAGE_PLATFORM_RELEASE_OR_CODENAME) \
-  org.voltage.version=$(VOLTAGEVERSION) \
-  ro.voltage.maintainer.gpg_key=$(VOLTAGE_GPG_KEY) \
-  ro.voltage.maintainer.gpg_uid="$(VOLTAGE_GPG_UID)"
+    ro.bestrom.build.status=$(VOLTAGE_BUILD_TYPE) \
+    ro.bestrom.platform_release_or_codename=$(VOLTAGE_PLATFORM_RELEASE_OR_CODENAME) \
+    org.bestrom.version=$(VOLTAGEVERSION) \
+    ro.bestrom.maintainer.gpg_key=$(VOLTAGE_GPG_KEY) \
+    ro.bestrom.maintainer.gpg_uid="$(VOLTAGE_GPG_UID)"

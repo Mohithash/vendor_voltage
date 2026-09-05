@@ -38,7 +38,7 @@ bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 		echo -e "${CL_BLD}${CL_GRN}▶ Output File :${CL_CYN} $(VOLTAGE_TARGET_PACKAGE)${CL_RST}"; \
 		echo -e "${CL_BLD}${CL_GRN}▶ SHA256      :${CL_CYN} `cut -d' ' -f1 $(VOLTAGE_TARGET_PACKAGE).sha256sum`${CL_RST}"; \
 		echo -e "${CL_BLD}${CL_GRN}▶ File Size   :${CL_CYN} `du -sh $(VOLTAGE_TARGET_PACKAGE) | awk '{print $$1}'`${CL_RST}"; \
-		echo -e "${CL_BLD}${CL_GRN}▶ Build Date  :${CL_CYN} `grep ro.voltage.build.date $(PRODUCT_OUT)/system/build.prop | cut -d'=' -f2-`${CL_RST}"; \
+		echo -e "${CL_BLD}${CL_GRN}▶ Build Date  :${CL_CYN} `grep ro.bestrom.build.date $(PRODUCT_OUT)/system/build.prop | cut -d'=' -f2-`${CL_RST}"; \
 		echo -e "\n${CL_BLD}${CL_GRN}[===============================================================]${CL_RST}\n"; \
 	}
 
@@ -56,6 +56,6 @@ fastbootpkg: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 		echo -e "${CL_BLD}${CL_GRN}▶ Output File :${CL_CYN} $(VOLTAGE_FASTBOOT_PACKAGE)${CL_RST}"; \
 		echo -e "${CL_BLD}${CL_GRN}▶ SHA256      :${CL_CYN} `cut -d' ' -f1 $(VOLTAGE_FASTBOOT_PACKAGE).sha256sum`${CL_RST}"; \
 		echo -e "${CL_BLD}${CL_GRN}▶ File Size   :${CL_CYN} `du -sh $(VOLTAGE_FASTBOOT_PACKAGE) | awk '{print $$1}'`${CL_RST}"; \
-		echo -e "${CL_BLD}${CL_GRN}▶ Build Date  :${CL_CYN} `grep ro.voltage.build.date $(PRODUCT_OUT)/system/build.prop | cut -d'=' -f2-`${CL_RST}"; \
+		echo -e "${CL_BLD}${CL_GRN}▶ Build Date  :${CL_CYN} `grep ro.bestrom.build.date $(PRODUCT_OUT)/system/build.prop | cut -d'=' -f2-`${CL_RST}"; \
 		echo -e "\n${CL_BLD}${CL_GRN}[===============================================================]${CL_RST}\n"; \
 	}
