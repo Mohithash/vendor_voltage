@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     LogViewer \
     Gramophone \
     GameSpace \
-    VoltageSetupWizard \
+    BestromSetupWizard \
     Seedvault \
     Datura \
     ExactCalculator \
