@@ -5,7 +5,7 @@ PRODUCT_PACKAGES += \
     Etar \
     ThemePicker \
     ThemesStub \
-    Jellyfish \
+    Jelly \
     LogViewer \
     Gramophone \
     GameSpace \
