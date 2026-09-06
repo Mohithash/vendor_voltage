@@ -54,7 +54,7 @@ PRODUCT_PRODUCT_PROPERTIES += is_expressive_design_enabled=true
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/voltage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/voltage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/voltage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions 
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
@@ -174,16 +174,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
     SystemUI
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=quicken \
-    pm.dexopt.install=speed-profile \
-    pm.dexopt.bg-dexopt=everything
-
-ifneq ($(AB_OTA_PARTITIONS),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.ab-ota=quicken
-endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
