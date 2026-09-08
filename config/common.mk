@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # Component overrides
 PRODUCT_PACKAGES += \
-    voltage-component-overrides.xml
+    bestrom-component-overrides.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.freeform_window_management.xml
@@ -218,7 +218,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
-    vendor/voltage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-voltage-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-voltage-product.xml
+    vendor/voltage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-bestrom-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-bestrom-product.xml
 
 # Versioning
 include vendor/voltage/config/version.mk

@@ -6,9 +6,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "voltage-component-overrides.xml",
+    name: "bestrom-component-overrides.xml",
     product_specific: true,
-    src: "etc/voltage-component-overrides.xml",
+    src: "etc/bestrom-component-overrides.xml",
     sub_dir: "sysconfig",
 }
 

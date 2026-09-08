@@ -47,6 +47,5 @@ VOLTAGE_PLATFORM_RELEASE_OR_CODENAME := 17.0
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.bestrom.build.status=$(VOLTAGE_BUILD_TYPE) \
     ro.bestrom.platform_release_or_codename=$(VOLTAGE_PLATFORM_RELEASE_OR_CODENAME) \
-    org.bestrom.version=$(VOLTAGEVERSION) \
     ro.bestrom.maintainer.gpg_key=$(VOLTAGE_GPG_KEY) \
     ro.bestrom.maintainer.gpg_uid="$(VOLTAGE_GPG_UID)"
