@@ -57,12 +57,18 @@
     <color name="primary_device_default_dark">#000000</color>
     <color name="primary_device_default_settings">#000000</color>
 
-    <color name="system_surface_bright_dark">#171717</color>
-    <color name="system_surface_container_dark">#000000</color>
-    <color name="system_surface_container_high_dark">#000000</color>
-    <color name="system_surface_dim_dark">#000000</color>
-    <color name="system_surface_container_highest_dark">#191919</color>
-    <color name="system_surface_container_low_dark">#000000</color>
+    <!-- The surface ramp has to stay monotonic and every container has to stay above the
+         page. Settings paints its preference cards with surface_container over a page of
+         surface_container (home) or surface_container_high (sub-pages), and the volume and
+         SystemUI dialogs use surface_container as well: a black card on a black page is an
+         invisible card. Same values as ThemeOverlayController's black ramp, so the two
+         agree whichever of the two overlays ends up on top. -->
     <color name="system_surface_container_lowest_dark">#000000</color>
+    <color name="system_surface_dim_dark">#080808</color>
+    <color name="system_surface_container_low_dark">#0C0C0C</color>
+    <color name="system_surface_container_dark">#101010</color>
+    <color name="system_surface_container_high_dark">#171717</color>
+    <color name="system_surface_container_highest_dark">#1B1B1B</color>
+    <color name="system_surface_bright_dark">#212121</color>
 
 </resources>
