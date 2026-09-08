@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
     ThemesStub \
     LogViewer \
     Gramophone \
-    GameSpace \
     BestromSetupWizard \
     Seedvault \
     Datura \
