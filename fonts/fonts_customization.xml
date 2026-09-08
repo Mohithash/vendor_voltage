@@ -1190,14 +1190,16 @@
     <alias name="space-grotesk-semi-bold" to="space-grotesk" weight="600" />
     <alias name="space-grotesk-bold" to="space-grotesk" weight="700" />
 
-    <!-- Doto (BestROM). Dot-matrix display face, used ONLY by config_clockFontFamily.
-         It must never be aliased to monospace, sans-serif or a headline role: it has
-         no coverage outside Latin and it is unreadable in a code or terminal view.
-         ROND 0 gives square dots. One weight only: the clock resolves this family with
-         Typeface.create(family, NORMAL) and then builds every step of its weight morph
-         itself through TypefaceCache's variation cache, so extra <font> entries here
-         would only add native typeface instances to the system font map that every app
-         process deserializes, and nothing would ever resolve them. -->
+    <!-- Doto (BestROM). Dot-matrix display face, named by config_clockFontFamily and
+         resolved by name in Settings for the homepage title, the row glyphs and the
+         row values. It must never be aliased to monospace, sans-serif or a headline
+         role: it has no coverage outside Latin and it is unreadable in a code or
+         terminal view. ROND 0 gives square dots. One weight only: every consumer
+         resolves this family with Typeface.create(family, NORMAL) and builds the
+         weights it needs with createFromTypefaceWithVariation, caching the result
+         itself because typeface_cache_for_var_settings is disabled on this build.
+         Extra <font> entries here would only add native typeface instances to the
+         system font map that every app process deserializes. -->
     <family customizationType="new-named-family" name="doto">
         <font weight="400" style="normal">Doto-Variable.ttf
             <axis tag="ROND" stylevalue="0" />
