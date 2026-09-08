@@ -2,16 +2,20 @@
 #
 # ADDOND_VERSION=2
 #
-# /system/addon.d/50-lineage.sh
-# During a LineageOS upgrade, this script backs up /system/etc/hosts,
-# /system is formatted and reinstalled, then the file is restored.
+# /system/addon.d/50-voltage.sh
+# During an upgrade this script backs up files listed below, /system is
+# formatted and reinstalled, then the files are restored.
+#
+# /system/etc/hosts is deliberately NOT in the list. BestROM ships a baked
+# blocklist there through the nullroute_etc_hosts module, and restoring the
+# pre-OTA copy over it would silently revert the blocklist for every build
+# after this one - passing every check run today and failing in a month.
 #
 
 . /tmp/backuptool.functions
 
 list_files() {
 cat <<EOF
-etc/hosts
 EOF
 }
 
