@@ -1161,4 +1161,47 @@
     <alias name="harmonyos-sans-bold" to="harmonyos-sans" weight="700" />
     <alias name="harmonyos-sans-black" to="harmonyos-sans" weight="900" />
     <alias name="harmonyos-sans-text-medium" to="harmonyos-sans-text" weight="500" />
+
+    <!-- Space Grotesk (BestROM). Variable, wght 300-700 - the weights outside that
+         range are deliberately not declared, minikin would only clamp them. No
+         fallback attribute: a named family with no fallback gets the whole Noto
+         fallback chain appended by SystemFonts.pushFamilyToFallback, which is what
+         keeps Malayalam, Devanagari, CJK and emoji resolving. There is no italic
+         cut of this family. -->
+    <family customizationType="new-named-family" name="space-grotesk">
+        <font weight="300" style="normal">SpaceGrotesk-Variable.ttf
+            <axis tag="wght" stylevalue="300" />
+        </font>
+        <font weight="400" style="normal">SpaceGrotesk-Variable.ttf
+            <axis tag="wght" stylevalue="400" />
+        </font>
+        <font weight="500" style="normal">SpaceGrotesk-Variable.ttf
+            <axis tag="wght" stylevalue="500" />
+        </font>
+        <font weight="600" style="normal">SpaceGrotesk-Variable.ttf
+            <axis tag="wght" stylevalue="600" />
+        </font>
+        <font weight="700" style="normal">SpaceGrotesk-Variable.ttf
+            <axis tag="wght" stylevalue="700" />
+        </font>
+    </family>
+    <alias name="space-grotesk-light" to="space-grotesk" weight="300" />
+    <alias name="space-grotesk-medium" to="space-grotesk" weight="500" />
+    <alias name="space-grotesk-semi-bold" to="space-grotesk" weight="600" />
+    <alias name="space-grotesk-bold" to="space-grotesk" weight="700" />
+
+    <!-- Doto (BestROM). Dot-matrix display face, used ONLY by config_clockFontFamily.
+         It must never be aliased to monospace, sans-serif or a headline role: it has
+         no coverage outside Latin and it is unreadable in a code or terminal view.
+         ROND 0 gives square dots. One weight only: the clock resolves this family with
+         Typeface.create(family, NORMAL) and then builds every step of its weight morph
+         itself through TypefaceCache's variation cache, so extra <font> entries here
+         would only add native typeface instances to the system font map that every app
+         process deserializes, and nothing would ever resolve them. -->
+    <family customizationType="new-named-family" name="doto">
+        <font weight="400" style="normal">Doto-Variable.ttf
+            <axis tag="ROND" stylevalue="0" />
+            <axis tag="wght" stylevalue="400" />
+        </font>
+    </family>
 </fonts-modification>
